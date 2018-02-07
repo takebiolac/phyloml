@@ -15,7 +15,7 @@ def prune_and_compute_rf_distance(treeFilepath, referenceFilepath):
     ref = Tree(referenceFilepath)
     
     tree.prune(ref.get_leaf_names())
-    return tree.robinson_foulds(ref)[0]
+    return tree.robinson_foulds(ref,unrooted_trees=True)[0]
 
 if __name__=="__main__":
     argvs = sys.argv
